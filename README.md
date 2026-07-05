@@ -9,9 +9,7 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-chore: bump version [version-bump]
+chore: bump version to v0.4.1 [version-bump]
 
-- agent: 0.3.0 -> 0.4.0 (minor)
-- shared: 0.3.0 -> 0.4.0 (minor)
-- web: 0.3.0 -> 0.4.0 (minor)
+0.4.0 -> 0.4.1 (patch)
 <!-- release-notes:end -->
