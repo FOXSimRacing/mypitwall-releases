@@ -9,7 +9,7 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-chore: bump version to v0.4.3 [version-bump]
+chore: bump version to v0.4.4 [version-bump]
 
-0.4.2 -> 0.4.3 (patch)
+0.4.3 -> 0.4.4 (patch)
 <!-- release-notes:end -->
