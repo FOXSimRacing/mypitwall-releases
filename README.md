@@ -1,7 +1,7 @@
 # myPitWall Agent — Releases
 
-Binários compilados do myPitWall Agent (instalador Windows), publicados automaticamente pelo CI do
-repositório privado `FOXSimRacing/myPitWall` a cada tag de versão.
+Compiled binaries for the myPitWall Agent (Windows installer), published automatically by CI from
+the private `FOXSimRacing/myPitWall` repository on every version tag.
 
-Este repositório não contém código-fonte — só os artefatos de release (`.exe` + `manifest.json`)
-usados pelo mecanismo de auto-atualização do próprio Agent.
+This repository contains no source code — only release artifacts (`.exe` + `manifest.json`) used
+by the Agent's own auto-update mechanism.
