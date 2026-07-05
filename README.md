@@ -5,3 +5,13 @@ the private `FOXSimRacing/myPitWall` repository on every version tag.
 
 This repository contains no source code — only release artifacts (`.exe` + `manifest.json`) used
 by the Agent's own auto-update mechanism.
+
+## Latest Release
+
+<!-- release-notes:start -->
+chore: bump version [version-bump]
+
+- agent: 0.3.0 -> 0.4.0 (minor)
+- shared: 0.3.0 -> 0.4.0 (minor)
+- web: 0.3.0 -> 0.4.0 (minor)
+<!-- release-notes:end -->
