@@ -9,13 +9,13 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.12.0
+## 0.13.0
 
 ### Minor Changes
 
-- 76bc102: Remove the driver dashboard, the in-app "Ajuda" menu and the "Configurações" panel — the web app is now a single engineer dashboard. "Iniciar com o Windows", "Minimizar para a bandeja" and "Copiar link remoto" moved to the Windows tray icon.
+- c77dc0f: Add multiclass color-coding to Tabela de Classificação and Tabela Relativa: a class-colored position badge showing rank within category (not overall), a new "#" overall-position column, a "-N L" lapped indicator matching iRacing's own Standings box, and a live PIT timer tracked agent-side so it survives a browser refresh. Also fixes CarClassColor/SessionLaps/SessionTime being misparsed as strings on a real session.
 
 ### Patch Changes
 
-- c5e33c5: Show the app logo and current version in both the driver and engineer dashboard headers.
+- 9268038: Make dashboard panel titles semibold for better visual hierarchy.
 <!-- release-notes:end -->
