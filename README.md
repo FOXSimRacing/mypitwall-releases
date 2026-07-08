@@ -9,9 +9,13 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.13.1
+## 0.14.0
+
+### Minor Changes
+
+- d401b6a: Add a horizontal track map to the engineer dashboard: the whole lap is compressed onto a single bar with the player fixed at the center, other cars shown as class-colored dots (labeled with their class position) at their physical track position, and pit-road cars rendered dimmed/gray.
 
 ### Patch Changes
 
-- d9eba81: Fix a bug where a tray-icon initialization failure (e.g. the native tray binary failing to load the icon on some machines) crashed the whole agent and triggered an infinite restart loop, preventing the app from ever starting. Tray subsystem errors are now non-fatal.
+- b9c3230: Fix a bug where a Cloudflare tunnel startup failure always surfaced a generic 30-second timeout message blaming a missing `cloudflared` dependency, even when the real cause was something else (e.g. Cloudflare rate-limiting new Quick Tunnel requests). The tunnel error shown in the engineer dashboard now reflects the actual cause, including a specific message for Cloudflare rate limiting.
 <!-- release-notes:end -->
