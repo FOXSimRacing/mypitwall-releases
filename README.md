@@ -9,12 +9,10 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.11.2
+## 0.11.3
 
 ### Patch Changes
 
-- 780f9c1: Stop the dashboard window from popping open automatically right after an auto-update — the app now stays minimized in the tray on that one relaunch, same as if the user had minimized it themselves.
-  - @mypitwall/shared@0.11.2
-- 36673d9: Replace the "connected" text indicator with a small dot that pulses mustard while the agent isn't connected to the sim and turns solid green once it is, and remove the redundant "Aguardando telemetria..." box — the dot now communicates connection status on both the driver and engineer dashboards.
-  - @mypitwall/shared@0.11.2
+- bba881e: Add a `forceUpdateCheck` command, triggered automatically when the web app is opened with `?update=true` in the URL, so an update check can be forced from a link instead of waiting for the agent's periodic timer or the tray menu.
+- 4ea71e9: Fix Lap Times table to match iRacing's own Standings box: row set is now the real driver roster (excluding spectators and the pace car) instead of the raw telemetry array, with a tie-break for equal/stale positions, the player's own row highlighted, and the Interval column showing iRacing's official gap field instead of an ad-hoc diff. Drivers who leave the session (disconnect, retire, etc.) now render with reduced opacity.
 <!-- release-notes:end -->
