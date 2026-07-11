@@ -9,9 +9,10 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.14.3
+## 0.14.4
 
 ### Patch Changes
 
-- 644f494: fix(release): retry release with windows-2022 runner
+- 161c848: fix: convert irsdk TypedArrays to JS Arrays for proper JSON serialization
+- ffd14b1: fix(release): retry release with windows-2022 runner
 <!-- release-notes:end -->
