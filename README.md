@@ -9,9 +9,9 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.14.6
+## 0.14.7
 
 ### Patch Changes
 
-- 86d4a90: fix(agent): actually fix the iracing-sdk-js Node ABI mismatch that v0.14.5 (4a54dc3) believed it had already resolved. That fix stripped `dependencies` from the staged app's package.json to stop electron-builder's own silent rebuild — which instead made its node-modules collector find nothing to collect and fall back to shipping the plain-Node-ABI addon straight from the monorepo's hoisted node_modules, the exact same crash from a different cause. Also fixes a second, previously undetected packaging bug (masked by the first crash happening earlier at startup): iracing-sdk-js's own `require('js-yaml')` failed once unpacked outside the asar, since js-yaml stayed packed inside it. Both the addon and js-yaml are now unpacked as siblings so the agent can actually reach a real iRacing session again. Verified end-to-end against a live session, not just a clean process start.
+- 10d0199: fix(agent): fix auto-update always failing to download since the electron-builder migration. electron-builder's default nsis artifactName includes a space ("myPitWall Setup X.Y.Z.exe"); it writes a separate GitHub-safe (hyphenated) filename into latest.yml assuming it will be the one publishing, but release-agent.yml instead uploads the raw file manually via `gh release create`, which sanitizes the space into a dot instead — leaving three different filenames in play (space, hyphen, dot) and electron-updater downloading a 404. artifactName is now pinned to an already-safe, no-spaces pattern so the built file, the latest.yml entry, and the uploaded GitHub asset all agree.
 <!-- release-notes:end -->
