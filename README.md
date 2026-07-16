@@ -9,9 +9,9 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.17.1
+## 0.17.2
 
 ### Patch Changes
 
-- 54e07d5: Fixed the Cloudflare Quick Tunnel silently going dead after staying up for a while (process crash or the tunnel just stopping routing traffic) with no automatic recovery. The agent now watches the tunnel's own process for an unexpected exit and periodically pings its public URL end-to-end; either signal triggers regenerating a fresh tunnel, re-notifying Discord with the new link, and reflecting a non-blocking "reconnecting" state on the dashboard instead of the old link staying stuck as "ready" forever.
+- de58460: The app now starts minimized in the system tray by default instead of popping the dashboard window open on every launch. A new "Iniciar minimizado" checkbox in the tray menu lets you turn this off if you'd rather see the window right away.
 <!-- release-notes:end -->
