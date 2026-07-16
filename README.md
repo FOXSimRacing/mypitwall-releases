@@ -9,9 +9,9 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.17.2
+## 0.17.3
 
 ### Patch Changes
 
-- de58460: The app now starts minimized in the system tray by default instead of popping the dashboard window open on every launch. A new "Iniciar minimizado" checkbox in the tray menu lets you turn this off if you'd rather see the window right away.
+- 0d97ca4: The Discord "session ready" notification now shows the driver's name in bold followed by "está correndo agora!" and a masked link labeled "Acompanhe pelo myPitWall", instead of a raw URL on its own line.
 <!-- release-notes:end -->
