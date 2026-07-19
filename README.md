@@ -9,10 +9,11 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.17.5
+## 0.17.6
 
 ### Patch Changes
 
-- 7a7cc94: The Discord tunnel-ready notification is now sent as soon as the tunnel comes up (instead of waiting for an active session) and shows a status icon before the link — 🟢 online with an active session, 🟡 online with no session loaded yet, 🔴 offline or link unreachable. The message is edited in place as the status changes instead of only being sent once, and it's now kept (edited to 🔴) rather than deleted when the tunnel goes down or the agent shuts down — it's only replaced once a new tunnel link is actually generated.
-  - @mypitwall/shared@0.17.5
+- f1cd024: The Discord tunnel webhook message now keeps naming the driver in its 🟡/🔴 states instead of falling back to a generic "myPitWall" subject — the last resolved driver name is persisted across agent restarts and reused whenever no session is currently loaded.
+- 26b806f: The status icon (🟢/🟡/🔴) in the Discord tunnel webhook message now shows on its own line below the link, instead of before it.
+- 0d1df76: Fixed the Pit Strategy panel showing the same estimated pit-lane time loss for all three fuel styles (Lift & Coast, Média Atual, Full Push) regardless of how much fuel each one adds. The time loss is now computed per style, matching the fuel amount actually shown for that style.
 <!-- release-notes:end -->
