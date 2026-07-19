@@ -9,10 +9,10 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.17.8
+## 0.17.9
 
 ### Patch Changes
 
-- 90b1387: The Discord tunnel-status webhook message no longer spells out "está correndo agora!" / "está offline." in its text — that's already conveyed by the 🟢/🔴 reaction. Instead it now reports the agent's version (e.g. "está utilizando a v1.2.3"), useful for spotting a driver running a stale build. The link line is unchanged.
-  - @mypitwall/shared@0.17.8
+- 241475e: The classification table drawer ("Tabela de Classificação") now sizes itself to its content width instead of being capped at a fixed 576px that was already narrower than the table's own columns, with a viewport-relative cap (95vw) and horizontal scroll as a fallback on narrow windows.
+- 0546d8a: Added a manual `workflow_dispatch` trigger to the release-agent CI workflow so an already-published version's installer can be rebuilt/republished on demand (e.g. after adding a repo secret that didn't exist at the time of the original release) without a version bump, new changeset, or new tag.
 <!-- release-notes:end -->
