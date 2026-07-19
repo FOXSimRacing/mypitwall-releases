@@ -9,11 +9,10 @@ by the Agent's own auto-update mechanism.
 ## Latest Release
 
 <!-- release-notes:start -->
-## 0.17.6
+## 0.17.7
 
 ### Patch Changes
 
-- f1cd024: The Discord tunnel webhook message now keeps naming the driver in its 🟡/🔴 states instead of falling back to a generic "myPitWall" subject — the last resolved driver name is persisted across agent restarts and reused whenever no session is currently loaded.
-- 26b806f: The status icon (🟢/🟡/🔴) in the Discord tunnel webhook message now shows on its own line below the link, instead of before it.
-- 0d1df76: Fixed the Pit Strategy panel showing the same estimated pit-lane time loss for all three fuel styles (Lift & Coast, Média Atual, Full Push) regardless of how much fuel each one adds. The time loss is now computed per style, matching the fuel amount actually shown for that style.
+- 11f0568: The agent can now set a native Discord reaction (🟢/🔴) on the tunnel-status message when a Discord bot token (`MYPITWALL_DISCORD_BOT_TOKEN`) is configured alongside the existing webhook — a plain webhook can't react to messages, only a real bot can. The redundant status-icon text line in the message itself was removed now that the reaction carries that signal. Opt-in: without a bot token, the agent just skips setting a reaction. Status-change reaction updates are now serialized (a race between two close-together status changes could otherwise leave more than one emoji on the message) and retry once/twice on a Discord rate-limit response instead of permanently dropping the update. The previous three-state status (🟢/🟡/🔴) is now binary (🟢/🔴) — an engineer only cares whether the driver is racing right now, so "app open, no session" now reads the same as "app closed": 🔴.
+  - @mypitwall/shared@0.17.7
 <!-- release-notes:end -->
